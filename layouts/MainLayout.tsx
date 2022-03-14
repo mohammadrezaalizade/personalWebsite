@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../components";
+import Header from "../components/header";
 import HeadLayout from "./HeadLayout";
 import classes from "./mainlayout.module.scss";
 interface MainLayoutProps {
