@@ -1,17 +1,32 @@
 @use "../../sass/responsive.module.scss" as responsive;
-
+@use "../../sass/color.module.scss" as color;
 .link {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
-  margin: 1rem;
+  margin: 0.5rem;
+  background-color: transparent;
+  padding: 0.4rem;
+  border-radius: 1rem;
   #icon svg {
     height: 2rem;
+    color: color.$secendry;
   }
   #title {
     display: none;
+    font-weight: bold;
+    color: color.$secendry;
     @include responsive.md {
       display: block;
+    }
+  }
+
+  &:hover {
+    background-color: color.$webOrange;
+    #title {
+      color: color.$white;
+    }
+    #icon svg {
+      color: color.$white;
     }
   }
 }
