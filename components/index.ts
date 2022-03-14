@@ -1,3 +1,4 @@
 import HomePage from "./home/Index";
+import Header from "./header";
 
-export { HomePage };
+export { HomePage,Header };
