@@ -16,9 +16,9 @@ const Header = () => {
       <Logo id={classes.logo} />
       <div className={classes.navigator}>
         <HeaderLink title="Home" href="/" icon={<HomeIcon />} />
-        <HeaderLink title="About" href="/" icon={<QuestionMarkCircleIcon />} />
-        <HeaderLink title="Skills" href="/" icon={<CogIcon />} />
-        <HeaderLink title="Contant" href="/" icon={<MailIcon />} />
+        <HeaderLink title="About" href="/about" icon={<QuestionMarkCircleIcon />} />
+        <HeaderLink title="Skills" href="/skills" icon={<CogIcon />} />
+        <HeaderLink title="Contant" href="/contact" icon={<MailIcon />} />
       </div>
       <div className={classes.social}>
         <a
