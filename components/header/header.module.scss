@@ -1,2 +1,33 @@
 .container {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: rgb(13, 169, 216);
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  height: 97vh;
+  svg#logo {
+    width: 3rem;
+    height: auto;
+    object-fit: contain;
+  }
+  .navigator {
+    display: flex;
+    flex: 0.97;
+    flex-direction: column;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    a {
+      svg {
+        width: 1rem;
+        height: auto;
+      }
+    }
+  }
 }
