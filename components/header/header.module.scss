@@ -1,10 +1,11 @@
+@use "../../sass/color.module.scss" as color;
 .container {
   flex: 0.1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  background: rgb(13, 169, 216);
+  background: color.$primery;
   margin: 0 1rem;
   padding: 0.5rem;
   border-radius: 1rem;
