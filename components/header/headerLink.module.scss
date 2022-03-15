@@ -1,7 +1,9 @@
 @use "../../sass/responsive.module.scss" as responsive;
 @use "../../sass/color.module.scss" as color;
+
 .link {
   display: flex;
+  position: relative;
   align-items: center;
   margin: 0.5rem;
   background-color: transparent;
@@ -20,13 +22,54 @@
     }
   }
 
-  &:hover {
+  &::before {
+    position: absolute;
+    display: flex;
+    border-radius: 1rem;
+    width: 0%;
+    height: 0%;
     background-color: color.$webOrange;
+    content: "";
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:hover {
     #title {
       color: color.$white;
     }
     #icon svg {
       color: color.$white;
+      transform: scale(1.1);
+    }
+
+    &::before {
+      position: absolute;
+      display: flex;
+      border-radius: 1rem;
+      width: 100%;
+      height: 100%;
+      background-color: color.$webOrange;
+      content: "";
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+     
+      @keyframes hoverLink {
+        0% {
+          width: 0;
+          height: 0;
+          transform: scale(1);
+        }
+        100% {
+          width: 100%;
+          height: 100%;
+          transform: scale(1.1);
+        }
+      }
+      animation-name: hoverLink;
+      animation-duration: 0.7s;
     }
   }
 }
@@ -38,7 +81,7 @@
   background-color: color.$webOrange;
   padding: 0.4rem;
   border-radius: 1rem;
-
+  transform: scale(1.1);
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   #icon svg {
