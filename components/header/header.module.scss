@@ -2,7 +2,7 @@
 @use "../../sass/responsive.module.scss" as responsive;
 .container {
   position: relative;
-  flex: 0.23;
+  flex: 0.27;
 
   @include responsive.sm {
     flex: 0.2;
