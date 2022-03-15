@@ -1,34 +1,45 @@
 @use "../../sass/color.module.scss" as color;
+@use "../../sass/responsive.module.scss" as responsive;
 .container {
-  flex: 0.1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  background: color.$primery;
-  margin: 0 1rem;
-  padding: 1rem 0.5rem;
-  border-radius: 1rem;
-  position: fixed;
-  height: 85vh;
-  svg#logo {
-    width: 3rem;
-    height: auto;
-    object-fit: contain;
+  position: relative;
+  flex: 0.3;
+
+  @include responsive.sm {
+    flex: 0.2;
   }
-  .navigator {
+  @include responsive.lg {
+    flex: 0.15;
+  }
+  .content {
     display: flex;
-    flex: 0.97;
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
-  }
-  .social {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    a {
-      svg {
-        width: 1rem;
-        height: auto;
+    background: color.$primery;
+    margin: 0 1rem;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    position: fixed;
+    height: 85vh;
+    svg#logo {
+      width: 3rem;
+      height: auto;
+      object-fit: contain;
+    }
+    .navigator {
+      display: flex;
+      flex: 0.97;
+      flex-direction: column;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      a {
+        svg {
+          width: 1rem;
+          height: auto;
+        }
       }
     }
   }

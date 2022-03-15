@@ -1,2 +1,6 @@
+@use "../../sass/color.module.scss" as color;
+
 .container {
+  position: relative;
+  padding: 1rem;
 }

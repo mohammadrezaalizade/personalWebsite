@@ -14,6 +14,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <header className={classes.container}>
+      <nav className={classes.content}>
       <Link href="/">
         <a>
           <Logo id={classes.logo} />
@@ -45,6 +46,7 @@ const Header = () => {
           <GitHub />
         </a>
       </div>
+      </nav>
     </header>
   );
 };
