@@ -1,38 +1,49 @@
 @use "../../sass/responsive.module.scss" as responsive;
 @use "../../sass/color.module.scss" as color;
 
-.link {
+@mixin mainStyle($textColor, $bgColor) {
   display: flex;
-  position: relative;
   align-items: center;
-  margin: 0.5rem;
-  background-color: transparent;
+  justify-content: center;
+  margin: 0.2rem;
+  background-color: $bgColor;
   padding: 0.4rem;
   border-radius: 1rem;
+  margin: 1rem;
+  @include responsive.md {
+    justify-content: flex-start;
+  }
+
   #icon svg {
     height: 2rem;
-    color: color.$secendry;
+    color: $textColor;
+    margin: 0;
   }
   #title {
     display: none;
     font-weight: bold;
-    color: color.$secendry;
+    color: $textColor;
     @include responsive.md {
       display: block;
     }
   }
+}
 
+.link {
+  @include mainStyle(color.$secendry, transparent);
+  position: relative;
   &::before {
     position: absolute;
     display: flex;
-    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
     width: 0%;
     height: 0%;
-    background-color: color.$webOrange;
     content: "";
-    bottom: 0;
-    left: 0;
     z-index: -1;
+    background-color: transparent;
+    border-radius: 1rem;
+    left: 0;
   }
 
   &:hover {
@@ -43,58 +54,41 @@
       color: color.$white;
       transform: scale(1.1);
     }
-
+    transition: all 1s ease-in-out;
     &::before {
-      position: absolute;
-      display: flex;
-      border-radius: 1rem;
       width: 100%;
       height: 100%;
       background-color: color.$webOrange;
-      content: "";
-      bottom: 0;
-      left: 0;
-      z-index: -1;
 
       @keyframes hoverLink {
         0% {
           width: 0;
           height: 0;
-          transform: scale(1);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(0);
+          //opacity: 0.5;
         }
         100% {
           width: 100%;
           height: 100%;
-          transform: scale(1.1);
+          transform: scale(1);
+          opacity: 1;
         }
       }
       animation-name: hoverLink;
-      animation-duration: 0.7s;
-      transition: all ease-in-out 0.7s;
+      animation-duration: 0.3s;
     }
   }
 }
 
 .linkActive {
-  display: flex;
-  align-items: center;
-  margin: 0.5rem;
-  background-color: color.$webOrange;
-  padding: 0.4rem;
-  border-radius: 1rem;
-  transform: scale(1.1);
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  @include mainStyle(color.$white,color.$webOrange);
   #icon svg {
-    height: 2rem;
-    color: color.$white;
+    transform: scale(1.1);
   }
-  #title {
-    display: none;
-    font-weight: bold;
-    color: color.$white;
-    @include responsive.md {
-      display: block;
-    }
-  }
+
 }
