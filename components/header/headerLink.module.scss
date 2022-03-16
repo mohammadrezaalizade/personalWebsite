@@ -28,7 +28,7 @@
   }
   #title {
     display: none;
-    font-weight: bold;
+    font-weight: 600;
     color: color.$secendry;
     z-index: 9;
     @include responsive.md {

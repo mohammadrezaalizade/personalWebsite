@@ -2,11 +2,7 @@
 @use "../../sass/responsive.module.scss" as responsive;
 .container {
   position: relative;
-  flex: 0.35;
-
-  @include responsive.sm {
-    flex: 0.2;
-  }
+  flex: 0.2;
   @include responsive.lg {
     flex: 0.15;
   }
@@ -16,7 +12,7 @@
     justify-content: flex-start;
     flex-direction: column;
     background: color.$primery;
-    margin: 1rem 0.2rem;
+    margin: auto 0.2rem;
     padding: 1rem 0.5rem;
     border-radius: 1rem;
     position: fixed;
@@ -38,12 +34,13 @@
     }
     .social {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       gap: 0.5rem;
       a {
         svg {
-          width: 1rem;
+          width: 0.7rem;
           height: auto;
+          object-fit: contain;
         }
       }
     }
