@@ -25,11 +25,13 @@
       width: 3rem;
       height: auto;
       object-fit: contain;
+      margin-bottom: 2rem;
     }
     .navigator {
       display: flex;
       flex: 0.97;
       flex-direction: column;
+      margin: 0.5rem 0;
     }
     .social {
       display: flex;
