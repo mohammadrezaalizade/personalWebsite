@@ -1,6 +1,23 @@
 @use "../../sass/color.module.scss" as color;
-
+@use "../../sass/responsive.module.scss" as responsive;
 .container {
   position: relative;
   padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 5rem;
+  .intro {
+    color: color.$white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    user-select: none;
+    @include responsive.md {
+      font-size: 2rem;
+    }
+
+    
+  }
 }

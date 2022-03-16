@@ -1,0 +1,10 @@
+@use "../../sass/responsive.module.scss" as responsive;
+
+span#inroduce {
+  display: inline;
+  letter-spacing: 0.2rem;
+
+  @include responsive.md {
+    letter-spacing: 0.4rem;
+  }
+}
