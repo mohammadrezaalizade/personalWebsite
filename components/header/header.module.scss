@@ -22,16 +22,19 @@
     position: fixed;
     height: 85vh;
     svg#logo {
-      width: 3rem;
+      width: 2rem;
       height: auto;
       object-fit: contain;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      @include responsive.md{
+        width: 3rem;
+      }
     }
     .navigator {
       display: flex;
       flex: 0.97;
       flex-direction: column;
-      margin: 0.5rem 0;
+      margin: 0.2rem 0;
     }
     .social {
       display: flex;
