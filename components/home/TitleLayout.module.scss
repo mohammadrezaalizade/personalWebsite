@@ -1,7 +1,11 @@
 @use "../../sass/responsive.module.scss" as responsive;
 
+h1#title {
+  display: flex;
+  flex-wrap: wrap;
+}
 span#inroduce {
-  display: inline;
+  display: flex;
   letter-spacing: 0.2rem;
 
   @include responsive.md {

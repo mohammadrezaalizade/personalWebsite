@@ -8,14 +8,14 @@ interface TitleLayoutProps {
 
 const TitleLayout: React.FC<TitleLayoutProps> = ({ title }): JSX.Element => {
   return (
-    <h1 style={{display:"flex",}}>
+    <h1 id={classes.title}>
       {title.split("").map((word) => (
         <React.Fragment key={uuidv4()}>
           <motion.span
             id={classes.inroduce}
             key={uuidv4()}
             whileHover={{
-              scale: 4,
+              scale: 1.5,
               color: "#f8a700",
               transition: {
                 duration: 0.1,

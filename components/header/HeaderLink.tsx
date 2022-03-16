@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classes from "./headerLink.module.scss";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 interface HeaderLinkProps {
   title: String;
@@ -10,15 +11,19 @@ interface HeaderLinkProps {
 }
 
 const HeaderLink: React.FC<HeaderLinkProps> = ({ href, icon, title }) => {
-  
-  const router = useRouter()
+  const router = useRouter();
 
-  const activeLink = href === router.asPath ? classes.linkActive: classes.link
-  
   return (
     <Link href={`${href}`}>
-      <a className={activeLink}>
-        <span id={classes.icon}>{icon}</span> <span id={classes.title}>{`${title}`}</span>
+      <a className={classes.link}>
+        {href === router.asPath && (
+          <motion.div
+            layoutId="headerLink"
+            className={classes.activeLink}
+          ></motion.div>
+        )}
+        <span id={classes.icon}>{icon}</span>{" "}
+        <span id={classes.title}>{`${title}`}</span>
       </a>
     </Link>
   );
