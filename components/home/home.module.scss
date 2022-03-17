@@ -13,9 +13,13 @@
     color: color.$white;
     font-size: 1.5rem;
     line-height: 3rem;
-    font-weight: 700;
+    font-weight: bold;
     user-select: none;
-    height: 50vh;
+    height: 75vh;
+    background-image: url("../../public/assets/image/hero.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
     @include responsive.md {
       font-size: 2rem;
     }

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import classes from "./home.module.scss";
 import { v4 as uuid } from "uuid";
 import Logo from "../../public/assets/image/Logo";
+import Hero from "../../public/assets/image/Hero";
 let intro: String = "Hi, I'm Mohammadreza, Front-end Developer";
 const varianteTitle = {
   init: {},
@@ -34,8 +35,6 @@ const HomePage = () => {
                 whileHover={{
                   scale: 1.5,
                   translateX: 2,
-                  rotate: -1,
-                  x:2,
                   color: "#f8a700",
                   transition: {
                     duration: 0.1,
@@ -49,6 +48,7 @@ const HomePage = () => {
             </React.Fragment>
           ))}
         </h1>
+        {/* <Hero /> */}
       </div>
     </section>
   );
