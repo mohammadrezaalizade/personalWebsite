@@ -3,6 +3,7 @@
 .container {
   position: relative;
   flex: 0.2;
+  z-index: 999;
   @include responsive.lg {
     flex: 0.15;
   }
