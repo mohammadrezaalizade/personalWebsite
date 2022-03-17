@@ -1,0 +1,29 @@
+@use "../../sass/color.module.scss" as color;
+@use "../../sass/responsive.module.scss" as responsive;
+.introduce {
+  display: block;
+  color: color.$white;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+  user-select: none;
+  height: 75vh;
+  background-image: url("../../public/assets/image/hero.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include responsive.md {
+    font-size: 2rem;
+  }
+  h1#title {
+    display: block;
+    flex-wrap: wrap;
+  }
+  span#inroduce {
+    display: inline-block;
+    letter-spacing: 0.3rem;
+    @include responsive.md {
+      letter-spacing: 0.4rem;
+    }
+  }
+}
