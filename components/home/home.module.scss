@@ -29,7 +29,7 @@
     }
     span#inroduce {
       display: inline-block;
-      letter-spacing: 0.4rem;
+      letter-spacing: 0.3rem;
       @include responsive.md {
         letter-spacing: 0.4rem;
       }
